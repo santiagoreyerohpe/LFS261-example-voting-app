@@ -247,6 +247,7 @@ pipeline {
                 waitForQualityGate abortPipeline: true
             }
         }
+   }
 
     stage('deploy to dev') {
       agent any
