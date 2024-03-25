@@ -14,7 +14,7 @@ sh 'mvn compile'
 }
 }
 }
-stage('test'){
+stage('testt'){
 steps{
 echo 'running unit tests on worker app'
 dir('worker'){
@@ -39,7 +39,7 @@ echo 'Packaging worker app with docker'
 script{
 docker.withRegistry('https://index.docker.io/v1/',
 'dockerlogin') {
-def workerImage = docker.build("santiagoreyero/worker:v$
+def workerImage = docker.build("xxxxx/worker:v$
 {env.BUILD_ID}", "./worker")
 workerImage.push()
 workerImage.push("latest")
@@ -54,3 +54,4 @@ echo 'the job is complete'
 }
 }
 }
+
